@@ -6,11 +6,13 @@ const SearchBar = ({term, onTermChange,onTermSubmit}) => {
     return (
         <View style = {styles.background}>
             <Feather name="search" style ={styles.iconStyle} />
-            <TextInput autoCapitalize="none" autoCorrect={false}
-             style={styles.inputStyle} placeholder= "Search"
+            <TextInput autoCapitalize="none" 
+            autoCorrect={false} 
+            style={styles.inputStyle}
+            placeholder= "Search"
             value={term} 
-            onChangeText={newTerm=> onTermChange(newTerm)}
-            onEndeEditing={()=> onTermSubmit()}
+            onChangeText={onTermChange}
+            onEndEditing={onTermSubmit}
             />
     </View>
     );
